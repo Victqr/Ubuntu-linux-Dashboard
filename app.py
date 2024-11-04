@@ -476,7 +476,7 @@ SETTINGS_TEMPLATE = """
                     <td>{{ user }}</td>
                     <td>{{ details['role'] }}</td>
                     <td>
-                        {% if user != 'victor' and session['user_profile']['role'] == 'Administrator' %}
+                        {% if user != 'admin' and session['user_profile']['role'] == 'Administrator' %}
                         <button onclick="location.href='{{ url_for('delete_user', username=user) }}'">Delete</button>
                         {% endif %}
                     </td>
@@ -1267,7 +1267,7 @@ def index():
         cmd_output="",
         openvpn_status=get_openvpn_status(),
         squid_status=get_squid_status(),
-        user_profile=session.get('user_profile', {"name": "Victor", "email": "victor@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'})
+        user_profile=session.get('user_profile', {"name": "admin", "email": "admin@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'})
     )
 
 
@@ -1286,7 +1286,7 @@ def edit_profile():
         session['user_profile'] = user_profile
         flash('Profile updated successfully!')
         return redirect(url_for('index'))
-    return render_template_string(PROFILE_EDIT_TEMPLATE, user_profile=session.get('user_profile', {"name": "Victor", "email": "victor@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'}), openvpn_status=get_openvpn_status(), squid_status=get_squid_status())
+    return render_template_string(PROFILE_EDIT_TEMPLATE, user_profile=session.get('user_profile', {"name": "admin", "email": "admin@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'}), openvpn_status=get_openvpn_status(), squid_status=get_squid_status())
 
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
@@ -1309,7 +1309,7 @@ def add_user():
 def delete_user(username):
     if not session.get('logged_in') or session.get('user_profile', {}).get('role') != 'Administrator':
         return redirect(url_for('login'))
-    if username in USERS and username != 'victor':
+    if username in USERS and username != 'admin':
         del USERS[username]
     return redirect(url_for('settings'))
 
@@ -1331,7 +1331,7 @@ def execute_command():
         smb_files=get_smb_files(BASE_SMB_PATH),
         cmd_output=output,
         openvpn_status=get_openvpn_status(),
-        user_profile=session.get('user_profile', {"name": "Victor", "email": "victor@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'})
+        user_profile=session.get('user_profile', {"name": "admin", "email": "admin@example.com", "role": "Administrator", "profile_logo": 'https://example.com/profile.png'})
     )
 
 @app.route('/start_openvpn')
@@ -1395,7 +1395,7 @@ def browse_smb():
                 smb_files.append({'name': item, 'path': item_path, 'type': 'directory'})
             else:
                 smb_files.append({'name': item, 'path': item_path, 'type': 'file'})
-        return render_template_string(HTML_TEMPLATE, smb_files=smb_files, main_logo=MAIN_LOGO_URL, system_info=get_system_info(), cmd_output="", openvpn_status=get_openvpn_status(), user_profile=session.get('user_profile', {"name": "Victor", "email": "victor@example.com", "role": "Administrator"}))
+        return render_template_string(HTML_TEMPLATE, smb_files=smb_files, main_logo=MAIN_LOGO_URL, system_info=get_system_info(), cmd_output="", openvpn_status=get_openvpn_status(), user_profile=session.get('user_profile', {"name": "admin", "email": "admin@example.com", "role": "Administrator"}))
     except FileNotFoundError:
         flash('Directory not found')
         return redirect(url_for('index'))
