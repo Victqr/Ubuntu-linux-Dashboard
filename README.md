@@ -1,6 +1,6 @@
 # Ubuntu Server Dashboard
 
-A comprehensive web-based dashboard for monitoring and managing Ubuntu server resources, built using Flask. This dashboard offers real-time system information, user management, service control, a live chat feature, and an integrated file-sharing interface.
+A comprehensive web-based dashboard for monitoring and managing Ubuntu server resources, built using Flask. This dashboard offers real-time system information, user management, service control, a live chat feature, and an integrated file-sharing interface. (MORE UPDATES SOON)
 
 ## Features
 
@@ -104,3 +104,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## Contact
 For any questions or feedback, feel free to contact me.
 
+## Updates
+More updates soon 
