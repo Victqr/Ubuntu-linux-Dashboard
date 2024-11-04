@@ -45,7 +45,7 @@ A comprehensive web-based dashboard for monitoring and managing Ubuntu server re
 ### Installation Steps
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/username/ubuntu-server-dashboard.git
+    git clone https://github.com/victqr/ubuntu-server-dashboard.git
     cd ubuntu-server-dashboard
     ```
 
@@ -68,7 +68,8 @@ A comprehensive web-based dashboard for monitoring and managing Ubuntu server re
 
 ## Screenshots
 ### Login Page
-![Login Page](https://i.imgur.com/Reaox5c.png)
+![image](https://github.com/user-attachments/assets/8e220441-2050-4002-9b6d-4d4089ad8244)
+
 
 ### Dashboard Overview
 - **System Monitoring**
@@ -89,5 +90,5 @@ Contributions are welcome! Please submit issues and pull requests to help improv
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Contact
-For any questions or feedback, feel free to contact [Your Name](mailto:your.email@example.com).
+For any questions or feedback, feel free to contact me.
 
