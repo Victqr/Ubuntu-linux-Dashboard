@@ -83,6 +83,13 @@ A comprehensive web-based dashboard for monitoring and managing Ubuntu server re
 - **Live Chat**
 - **SMB File Sharing**
 
+### User Management Overview
+![image](https://github.com/user-attachments/assets/2edc0d8b-b667-4620-8f84-41fdb064e363)
+
+### Edit Profile Overview
+![image](https://github.com/user-attachments/assets/6a5ddb7e-b688-48bf-a8f3-e57a76eb7b0e)
+
+
 ## Security Considerations
 - **Secret Key**: Change `app.secret_key` for production environments.
 - **Password Storage**: Use secure methods for storing user passwords (e.g., hashing with `bcrypt`).
