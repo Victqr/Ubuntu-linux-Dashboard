@@ -72,6 +72,11 @@ A comprehensive web-based dashboard for monitoring and managing Ubuntu server re
 
 
 ### Dashboard Overview
+![Schermafbeelding 2024-11-04 222303](https://github.com/user-attachments/assets/b5b52103-871c-43b5-867f-0fc025f1d70c)
+![Schermafbeelding 2024-11-04 222556](https://github.com/user-attachments/assets/56da0fc0-9e90-41eb-9014-68be472f27b7)
+![Schermafbeelding 2024-11-04 222626](https://github.com/user-attachments/assets/dae9e1c5-653d-4944-b894-22f8e676d539)
+
+
 - **System Monitoring**
 - **User Profile**
 - **Service Controls**
